@@ -1,0 +1,15 @@
+[options]
+#mode bmc
+#depth 100
+
+mode cover
+
+[engines]
+smtbmc
+
+[script]
+read -formal demo.sv
+prep -top demo
+
+[files]
+demo.sv

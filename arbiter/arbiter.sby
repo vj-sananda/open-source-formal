@@ -1,0 +1,24 @@
+[options]
+#Prove for chosen depth
+#mode bmc
+#depth 50
+expect fail
+
+#Prove by induction
+mode prove
+
+#mode cover
+#depth 200
+
+[engines]
+smtbmc boolector
+#abc bmc3
+
+[script]
+read -formal arbiter.sv
+read -formal testbench.sv
+prep -top testbench
+
+[files]
+arbiter.sv
+testbench.sv

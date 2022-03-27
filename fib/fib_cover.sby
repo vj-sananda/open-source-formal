@@ -1,0 +1,12 @@
+[options]
+mode cover
+
+[engines]
+smtbmc z3
+
+[script]
+read_verilog -formal fib.v
+prep -top fib
+
+[files]
+fib.v
